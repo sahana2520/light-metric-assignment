@@ -1,0 +1,39 @@
+.dialog {
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+
+  &__title {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-width: 100px;
+    height: 25px;
+  }
+
+  &__value {
+    color: gray;
+  }
+
+  &__image {
+    width: 180px;
+    height: 85px;
+    margin-bottom: 10px;
+  }
+
+  &__items {
+    display: flex;
+  }
+}
+
+.mat-icon {
+  position: relative;
+  bottom: 10px;
+}
+
+::ng-deep .mat-icon-button {
+  border-radius: 0 !important;
+  width: 1px;
+  height: 1px;
+  margin-right: 12px;
+}

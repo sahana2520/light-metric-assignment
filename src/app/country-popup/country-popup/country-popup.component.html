@@ -1,0 +1,35 @@
+<div>
+  <div class="dialog">
+    <div class="dialog__title">{{data.name}}</div>
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <img class="dialog__image" [src]="data.flags">
+  <div class="dialog__items">
+    <div class="dialog__title">Capital</div>
+    <div class="dialog__value">{{data.capital || "-"}}</div>
+  </div>
+  <div class="dialog__items">
+    <div class="dialog__title">Continent</div>
+    <div class="dialog__value">{{data.continents || "-"}}</div>
+  </div>
+  <div class="dialog__items">
+    <div class="dialog__title">Currency</div>
+    <div class="dialog__value">{{currency || "-"}}</div>
+  </div>
+  <div class="dialog__items">
+    <div class="dialog__title">Languages</div>
+    <div class="dialog__value">{{languages || "-"}}</div>
+  </div>
+  <div class="dialog__items">
+    <div class="dialog__title">Population</div>
+    <div class="dialog__value">{{data.population || "-"}}</div>
+  </div>
+  <div class="dialog__items">
+    <div class="dialog__title">TimeZone</div>
+    <div class="dialog__value">{{data.timezones || "-"}}</div>
+  </div>
+</div>
+
+

@@ -1,0 +1,42 @@
+<div class="search-card">
+  <input type="text" class="search-card__input" [(ngModel)]="searchInput" (input)="enableButton()">
+  <button mat-raised-button color="primary" (click)="getSearchCountries()" [disabled]="!searchInput">Search</button>
+</div>
+<div class="card">
+  <div *ngIf="!isLoading" class="card__container">
+    <div class="card__container__info" (click)="openDialog(country)" *ngFor="let country of countries">
+      <img class="card__container__info__img" [src]=country.flags>
+      <div class="card__container__info-card__name">{{country.name}}</div>
+      <div class="card__container__info__continent">{{country.continents}}</div>
+    </div>
+    <button
+      *ngIf="fullCountryList?.length > 20 && countries.length"
+      class="show-more"
+      (click)="showMore()"
+    >...Show More
+    </button>
+  </div>
+  <div class="footer" [class._position]="isLoading || countries.length <= 4">
+    <div class="footer__info">
+      <img class="footer__info__logo" src="../../../assets/logo.png">
+      <div class="footer__info__email">
+        <input type="text" class="footer__info__email__text" placeholder="Enter Email" [(ngModel)]="email">
+        <button class="subscribe-button" mat-raised-button color="primary" (click)="userSubscription()">Subscribe
+        </button>
+      </div>
+    </div>
+    <div class="footer__section">
+      <div class="footer__section__text">WorldPedia Inc</div>
+      <div class="footer__section__subtext">2023 | All rights reserved</div>
+    </div>
+  </div>
+</div>
+<mat-spinner *ngIf="isLoading" diameter="50">></mat-spinner>
+
+
+
+
+
+
+
+
